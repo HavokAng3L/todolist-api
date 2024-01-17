@@ -33,7 +33,6 @@ function postTodo(req, res) {
 }
 
 async function deleteTodo(req, res) {
-  console.log(req);
   // using params this time
   const idOfItemToDelete = await req.params.id;
   const status = await Todo.findByIdAndDelete(idOfItemToDelete);
