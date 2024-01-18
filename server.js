@@ -4,7 +4,7 @@ const env = require("dotenv");
 const mongoose = require("mongoose");
 
 // Port used for this API
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 // Declaring instance of express
 const api = Express();
 // Declaring an instance of dotenv
