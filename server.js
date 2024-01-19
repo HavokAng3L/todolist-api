@@ -22,7 +22,7 @@ api.use(
   cors({
     origin: [
       "https://main--dynamic-semifreddo-ef4e4f.netlify.app",
-      "https://dynamic-semifreddo-ef4e4f.netlify.app/",
+      "https://dynamic-semifreddo-ef4e4f.netlify.app",
     ],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     preflightContinue: false,
