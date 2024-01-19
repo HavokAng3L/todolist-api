@@ -20,7 +20,7 @@ api.use(Express.json());
 
 api.use(
   cors({
-    origin: "https://main--dynamic-semifreddo-ef4e4f.netlify.app/",
+    origin: "https://main--dynamic-semifreddo-ef4e4f.netlify.app",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     preflightContinue: false,
     optionsSuccessStatus: 204,
