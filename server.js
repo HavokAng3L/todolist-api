@@ -2,6 +2,8 @@ const Express = require("express");
 const todo = require("./routes/todo.routes");
 const env = require("dotenv");
 const mongoose = require("mongoose");
+const helmet = require("helmet");
+const cors = require("cors");
 
 // Port used for this API
 const PORT = process.env.PORT || 5000;
@@ -13,7 +15,15 @@ env.config();
 const URI = process.env.MONGO_URI;
 mongoose.connect(URI);
 
+api.use(helmet());
 api.use(Express.json());
+
+api.use(
+  cors({
+    origin: "https://main--dynamic-semifreddo-ef4e4f.netlify.app/",
+    optionsSuccessStatus: 200,
+  })
+);
 
 // Declaring an endpoint
 api.use("/todo", todo);
